@@ -1,33 +1,255 @@
+
+/* INICIO DE SECCION VIDEO */
+#videoseccion{
+  /* height: 500px; */
+}
+
+.yt-video {
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.yt-video iframe,
+.yt-video object,
+.yt-responsive embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.videoprueba{
+z-index: -99;
+}
+
+.video-container 
+{
+  top: 0%;
+  left: 0%;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+video.fillWidth {
+  width: 100%;
+}
+.video-background {
+  background: #000;
+  /* position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; */
+  z-index: -99;
+}
+  /* .video-background::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: rgba(0,0,0,0.75)
+  } */
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+
+
+/* FIN DE SECCION VIDEO */
+
+/* INICIO DE SECCION QUIENES SOMOS */
+#quienes{
+  /* height: 1200px;
+  padding-top: 5rem */
+  padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 1155px;
+    margin: auto;
+}
+
+/* .parrafoquienes{
+  margin-top: 2rem !important;
+    margin: auto;
+} */
+
+#logoparrafo{
+  max-width: 200px;
+}
+
+.tituloseccion{
+
+}
+
+/* FIN DE SECCION QUIENES SOMOS */
+.marginauto{
+  margin: auto
+}
+
+
+
+/*INICIO DE PAGINA HEADER */
+.header {
+  /* background-color: blue; */
+  /* height: 100vh; */
+  background: url("http://www.imagenesdefondo.net/wp-content/uploads/2015/11/fondo-pantalla.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top:0;
+}
+
+#headerDescripcion{
+  position: absolute;
+  width: 650px;
+  color: white;
+  top: 30vh;
+  left: 50%;
+  margin-left: -300px;
+}
+
+#logoDescripcion{
+  width: 60%;
+  max-width: 600px;
+}
+
+.tituloDescripcion{
+  font-size: 36px;
+  margin-top: 1.5rem;
+}
+.tituloDescripcion2{
+  font-size: 24px;
+  /* margin-top: 1.5rem; */
+}
+
+.iconosproductos{
+  max-width: 80px;
+  margin-top: 2rem
+    /* max-height: 133px; */
+}
+@media(max-width :500px){
+  #headerDescripcion{
+    width: 320px;
+    left: 50%;
+    margin-left: -160px;
+  }
+
+  .tituloDescripcion{
+    font-size: 24px
+  }
+  .tituloDescripcion2{
+    font-size: 18px
+  }
+
+  #logoDescripcion{
+    width: 80%;
+  }
+}
+
+/* NAVBAR */
+.AppBar .logoheader{
+  max-height: 45px ;
+}
+
+.AppBarNext .logoheader{
+  max-height: 24px ;
+}
+.navbar-dark .navbar-toggler {
+  /* color: rgba(255,255,255,1); */
+  border-color: rgba(255,255,255,0) !important;
+}
+
+
+ul > li > a, nav > a{
+  /* font-family: Montserrat; */
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  padding: 15px;
+}
+
+.AppBar {
+  width: 80%;
+   height: 100px;
+   border-top: 5px solid #ec1d25;
+   -webkit-transition: 2s; /* Safari */
+   transition: 2s;
+}
+
+.AppBarNext{
+  width: 100%;
+  margin-top: 0px;
+  border-radius: 0.1rem;
+  background-color: #357da8;
+  border-bottom: 5px solid #ec1d25;
+  -webkit-transition: 2s; /* Safari */
+  transition: 2s;
+
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ARROW */
+.arrow{
+  position: absolute;
+  /* top: 50%; */
+  bottom: 3rem;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
-
-.App-link {
-  color: #61dafb;
+.arrow span{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid #ec1d2599;
+  border-right: 5px solid #ec1d2599;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 6s infinite;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.arrow span:nth-child(2){
+  animation-delay: -0.3s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-10px,-10px);
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(10px,10px);
   }
 }
+/* FIN DE PAGINA HEADER */
