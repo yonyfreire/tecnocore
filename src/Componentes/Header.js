@@ -88,7 +88,7 @@ class Header extends Component {
 
         {/* NAVEGACION */}
         <Navbar color="faded" dark expand="sm" fixed="top" className={this.state.scroll > this.state.top ? "marginauto AppBarNext " : "marginauto AppBar"}>
-          <RubberBand delay={200} duration={2000}><NavbarBrand href="/"><img className="logoheader d-none d-md-block" src={logo}></img><img className="logoheader d-block d-md-none" src={logochico}></img></NavbarBrand></RubberBand>
+          <RubberBand delay={200} duration={2000}><NavbarBrand href="#Header"><img className="logoheader d-none d-md-block" src={logo}></img><img className="logoheader d-block d-md-none" src={logochico}></img></NavbarBrand></RubberBand>
           <NavbarToggler color="red" onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

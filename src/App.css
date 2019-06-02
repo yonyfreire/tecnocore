@@ -3,7 +3,29 @@
 #videoseccion{
   /* height: 500px; */
 }
-
+#cabecera{
+  padding-top: 56.25%;
+  width: 100%;
+  /* height: 100vh; */
+    position: relative;
+}
+#video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+/* #video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  visibility: visible;
+} */
 .yt-video {
   height: 0;
   padding-bottom: 56.25%;
@@ -67,12 +89,12 @@ video.fillWidth {
   pointer-events: none;
 }
 
-@media (min-aspect-ratio: 16/9) {
-  .video-foreground { height: 300%; top: -100%; }
-}
-@media (max-aspect-ratio: 16/9) {
-  .video-foreground { width: 300%; left: -100%; }
-}
+/* @media (min-aspect-ratio: 16/9) {
+  #video { height: 200%; top: -0%; }
+} */
+/* @media (aspect-ratio: 16/9) {
+  #video { width: 300%; left: -100%; } */
+/* } */
 
 
 /* FIN DE SECCION VIDEO */
